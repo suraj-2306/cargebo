@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.5.1-0-g916b5db  Build Version: 1.5.7152.31018
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="cargebo_gazebo">
+  <link
+    name="chassey">
+    <inertial>
+      <origin
+        xyz="9.36027875579152E-18 7.77915058758349E-18 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.075" />
+      <inertia
+        ixx="3.578125E-05"
+        ixy="6.77626357803441E-23"
+        ixz="0"
+        iyy="9.765625E-05"
+        iyz="5.64688631502867E-22"
+        izz="6.3125E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cargebo_gazebo/meshes/chassey.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cargebo_gazebo/meshes/chassey.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="rear_r">
+    <inertial>
+      <origin
+        xyz="4.4062E-15 4.2397E-15 -0.005"
+        rpy="0 0 0" />
+      <mass
+        value="0.0070686" />
+      <inertia
+        ixx="4.5651E-07"
+        ixy="-5.294E-23"
+        ixz="9.8527E-24"
+        iyy="4.5651E-07"
+        iyz="-4.8504E-25"
+        izz="7.9522E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cargebo_gazebo/meshes/rear_r.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cargebo_gazebo/meshes/rear_r.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rear_r_joint"
+    type="continuous">
+    <origin
+      xyz="-0.04 0.0375 0"
+      rpy="0 0 0" />
+    <parent
+      link="chassey" />
+    <child
+      link="rear_r" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="rear_l">
+    <inertial>
+      <origin
+        xyz="-7.7022E-16 -1.045E-14 0.005"
+        rpy="0 0 0" />
+      <mass
+        value="0.0070686" />
+      <inertia
+        ixx="4.5651E-07"
+        ixy="5.294E-23"
+        ixz="-4.6788E-22"
+        iyy="4.5651E-07"
+        iyz="-4.662E-22"
+        izz="7.9522E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cargebo_gazebo/meshes/rear_l.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cargebo_gazebo/meshes/rear_l.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rear_l_joint"
+    type="continuous">
+    <origin
+      xyz="-0.04 -0.0375 0"
+      rpy="0 0 0" />
+    <parent
+      link="chassey" />
+    <child
+      link="rear_l" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="front_l">
+    <inertial>
+      <origin
+        xyz="-6.9389E-18 2.3079E-50 0.005"
+        rpy="0 0 0" />
+      <mass
+        value="0.0070686" />
+      <inertia
+        ixx="4.5651E-07"
+        ixy="9.5586E-55"
+        ixz="-3.2283E-40"
+        iyy="4.5651E-07"
+        iyz="-1.0245E-39"
+        izz="7.9522E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cargebo_gazebo/meshes/front_l.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cargebo_gazebo/meshes/front_l.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_l_joint"
+    type="continuous">
+    <origin
+      xyz="0.04 -0.0375 0"
+      rpy="0 0 0" />
+    <parent
+      link="chassey" />
+    <child
+      link="front_l" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="front_r">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cargebo_gazebo/meshes/front_r.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cargebo_gazebo/meshes/front_r.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_r_joint"
+    type="continuous">
+    <origin
+      xyz="0.04 0.0375 0"
+      rpy="0 0 0" />
+    <parent
+      link="chassey" />
+    <child
+      link="front_r" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+</robot>
